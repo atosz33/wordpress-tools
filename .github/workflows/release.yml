@@ -48,7 +48,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git tag -a "${{ inputs.plugin_directory }}-v${{ inputs.version }}" -m "${{ steps.plugin_info.outputs.PLUGIN_NAME }} v${{ inputs.version }}"
-          git push origin "${{ inputs.plugin_directory }}-v${{ inputs.version }}"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git "${{ inputs.plugin_directory }}-v${{ inputs.version }}"
 
       - name: Create Release
         id: create_release
