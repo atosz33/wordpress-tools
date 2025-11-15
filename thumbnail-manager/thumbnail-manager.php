@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Thumbnail Manager
  * Description: Admin tool to view and (re)generate post featured images using Pexels API.
- * Version: 0.5
+ * Version: 0.6
  * Author: Attila Kis
  */
 
