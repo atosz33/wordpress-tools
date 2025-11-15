@@ -1,0 +1,72 @@
+name: WordPress Plugin Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      plugin_directory:
+        description: 'Plugin directory name (e.g., thumbnail-manager)'
+        required: true
+        type: string
+      version:
+        description: 'Version number (e.g., 0.3)'
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify directory exists
+        run: |
+          if [ ! -d "${{ inputs.plugin_directory }}" ]; then
+            echo "Error: Directory ${{ inputs.plugin_directory }} does not exist"
+            exit 1
+          fi
+
+      - name: Create plugin name from directory
+        id: plugin_info
+        run: |
+          PLUGIN_NAME=$(echo "${{ inputs.plugin_directory }}" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+          echo "PLUGIN_NAME=${PLUGIN_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Create plugin zip
+        run: |
+          cd ${{ inputs.plugin_directory }}
+          zip -r ../${{ inputs.plugin_directory }}-${{ inputs.version }}.zip . \
+            -x "*.git*" \
+            -x "*node_modules*" \
+            -x "*.DS_Store" \
+            -x "*.md"
+          cd ..
+
+      - name: Create tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ inputs.plugin_directory }}-v${{ inputs.version }}" -m "${{ steps.plugin_info.outputs.PLUGIN_NAME }} v${{ inputs.version }}"
+          git push origin "${{ inputs.plugin_directory }}-v${{ inputs.version }}"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ inputs.plugin_directory }}-v${{ inputs.version }}
+          release_name: ${{ steps.plugin_info.outputs.PLUGIN_NAME }} v${{ inputs.version }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ inputs.plugin_directory }}-${{ inputs.version }}.zip
+          asset_name: ${{ inputs.plugin_directory }}-${{ inputs.version }}.zip
+          asset_content_type: application/zip
