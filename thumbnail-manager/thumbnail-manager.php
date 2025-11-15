@@ -256,10 +256,10 @@ class TM_Thumbnail_Manager {
             wp_mkdir_p($assets_dir);
         }
         
-        $css_content = file_get_contents(__DIR__ . '/template-admin.css');
+        $css_content = file_get_contents(__DIR__ . '/assets/template-admin.css');
         file_put_contents($assets_dir . '/admin.css', $css_content);
         
-        $js_content = file_get_contents(__DIR__ . '/template-admin.js');
+        $js_content = file_get_contents(__DIR__ . '/assets/template-admin.js');
         file_put_contents($assets_dir . '/admin.js', $js_content);
     }
 
