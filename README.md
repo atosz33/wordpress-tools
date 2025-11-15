@@ -46,8 +46,5 @@ A WordPress admin tool to view and generate post featured images using the Pexel
 
 ---
 
-## License
-
-[Add your license information here]
 
 
