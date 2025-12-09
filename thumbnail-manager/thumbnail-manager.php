@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Thumbnail Manager
+ * Plugin Name: Easy thumbnail manager
  * Description: Admin tool to view and (re)generate post featured images using Pexels API.
- * Version: 1.0
+ * Version: 1.1
  * Author: Attila Kis
  */
 
@@ -17,7 +17,9 @@ class TM_Thumbnail_Manager {
         add_action('wp_ajax_tm_get_posts', array($this, 'ajax_get_posts'));
         add_action('wp_ajax_tm_search_images', array($this, 'ajax_search_images'));
         add_action('wp_ajax_tm_set_thumbnail', array($this, 'ajax_set_thumbnail'));
+        add_action('wp_ajax_tm_remove_thumbnail', array($this, 'ajax_remove_thumbnail'));
         add_action('admin_init', array($this, 'register_settings'));
+        add_action('add_meta_boxes', array($this, 'add_meta_box'));
     }
 
     public function admin_menu() {
@@ -42,16 +44,25 @@ class TM_Thumbnail_Manager {
     }
 
     public function enqueue_scripts($hook) {
-        if (strpos($hook, 'tm-thumbnail-manager') === false && strpos($hook, 'tm-settings') === false) {
+        $is_plugin_page = strpos($hook, 'tm-thumbnail-manager') !== false || strpos($hook, 'tm-settings') !== false;
+        $is_post_edit = in_array($hook, array('post.php', 'post-new.php'));
+        
+        if (!$is_plugin_page && !$is_post_edit) {
             return;
         }
         
         wp_enqueue_style('tm-admin-css', plugins_url('assets/admin.css', __FILE__), array(), '1.0');
         wp_enqueue_script('tm-admin-js', plugins_url('assets/admin.js', __FILE__), array('jquery'), '1.0', true);
         
+        $post_id = 0;
+        if ($is_post_edit && isset($_GET['post'])) {
+            $post_id = intval($_GET['post']);
+        }
+        
         wp_localize_script('tm-admin-js', 'tmData', array(
             'ajaxUrl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('tm_nonce')
+            'nonce' => wp_create_nonce('tm_nonce'),
+            'postId' => $post_id
         ));
     }
 
@@ -59,6 +70,18 @@ class TM_Thumbnail_Manager {
         ?>
         <div class="wrap tm-wrap">
             <h1>Thumbnail Manager</h1>
+            
+            <div class="tm-filters">
+                <input type="text" id="tm-post-search" class="tm-filter-input" placeholder="Search by title...">
+                <select id="tm-filter-status" class="tm-filter-select">
+                    <option value="all">All Posts</option>
+                    <option value="with-image">With Thumbnail</option>
+                    <option value="without-image">Without Thumbnail</option>
+                </select>
+                <button id="tm-apply-filter" class="button button-primary">Filter</button>
+                <button id="tm-reset-filter" class="button">Reset</button>
+            </div>
+            
             <div id="tm-posts-grid" class="tm-grid">
                 <p class="tm-loading">Loading posts...</p>
             </div>
@@ -121,6 +144,63 @@ class TM_Thumbnail_Manager {
 
     public function register_settings() {
         register_setting('tm_settings_group', self::OPTION_KEY);
+    }
+
+    public function add_meta_box() {
+        add_meta_box(
+            'tm-thumbnail-box',
+            'Thumbnail Manager',
+            array($this, 'render_meta_box'),
+            'post',
+            'side',
+            'default'
+        );
+    }
+
+    public function render_meta_box($post) {
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $has_thumbnail = !empty($thumbnail_id);
+        ?>
+        <div class="tm-meta-box">
+            <?php if ($has_thumbnail): ?>
+                <div class="tm-meta-preview">
+                    <?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
+                </div>
+                <p>
+                    <button type="button" class="button button-large tm-meta-remove" data-post-id="<?php echo $post->ID; ?>">
+                        Remove Thumbnail
+                    </button>
+                </p>
+            <?php endif; ?>
+            <p>
+                <button type="button" class="button button-primary button-large tm-meta-generate" data-post-id="<?php echo $post->ID; ?>" data-post-title="<?php echo esc_attr(get_the_title($post->ID)); ?>">
+                    <?php echo $has_thumbnail ? 'Regenerate Thumbnail' : 'Generate Thumbnail'; ?>
+                </button>
+            </p>
+            <p class="description">Generate featured images from Pexels API</p>
+        </div>
+        
+        <!-- Modal for image generation/regeneration -->
+        <div id="tm-modal" class="tm-modal" style="display:none;">
+            <div class="tm-modal-overlay"></div>
+            <div class="tm-modal-content">
+                <div class="tm-modal-header">
+                    <h2 id="tm-modal-title">Generate Thumbnail</h2>
+                    <button class="tm-modal-close">&times;</button>
+                </div>
+                <div class="tm-modal-body">
+                    <div class="tm-search-section">
+                        <input type="text" id="tm-search-query" class="tm-input" placeholder="Enter search query (e.g., nature, technology, business)">
+                        <button id="tm-search-btn" class="button button-primary">Search Images</button>
+                    </div>
+                    <div id="tm-images-grid" class="tm-images-grid"></div>
+                    <div id="tm-loading" class="tm-modal-loading" style="display:none;">
+                        <p>Searching for images...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
     }
 
     public function ajax_get_posts() {
@@ -214,7 +294,6 @@ class TM_Thumbnail_Manager {
             wp_send_json_error(array('message' => 'Invalid parameters.'));
         }
         
-        // Download the image
         require_once(ABSPATH . 'wp-admin/includes/file.php');
         require_once(ABSPATH . 'wp-admin/includes/media.php');
         require_once(ABSPATH . 'wp-admin/includes/image.php');
@@ -230,7 +309,6 @@ class TM_Thumbnail_Manager {
             'tmp_name' => $tmp
         );
         
-        // Upload the image
         $attachment_id = media_handle_sideload($file_array, $post_id, 'Photo by ' . $photographer);
         
         if (is_wp_error($attachment_id)) {
@@ -238,7 +316,6 @@ class TM_Thumbnail_Manager {
             wp_send_json_error(array('message' => 'Failed to save image.'));
         }
         
-        // Set as featured image
         set_post_thumbnail($post_id, $attachment_id);
         
         $thumbnail_url = wp_get_attachment_image_url($attachment_id, 'medium');
@@ -246,6 +323,20 @@ class TM_Thumbnail_Manager {
         wp_send_json_success(array(
             'thumbnail' => $thumbnail_url
         ));
+    }
+
+    public function ajax_remove_thumbnail() {
+        check_ajax_referer('tm_nonce', 'nonce');
+        
+        $post_id = intval($_POST['post_id']);
+        
+        if (!$post_id) {
+            wp_send_json_error(array('message' => 'Invalid post ID.'));
+        }
+        
+        delete_post_thumbnail($post_id);
+        
+        wp_send_json_success(array('message' => 'Thumbnail removed successfully.'));
     }
 
     public static function activate() {

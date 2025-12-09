@@ -3,6 +3,7 @@
 
     let currentPostId = 0;
     let currentPostTitle = '';
+    let allPosts = [];
 
     function loadPosts() {
         $('#tm-posts-grid').html('<p class="tm-loading">Loading posts...</p>');
@@ -16,7 +17,8 @@
             },
             success: function(response) {
                 if (response.success) {
-                    renderPosts(response.data);
+                    allPosts = response.data;
+                    filterAndRenderPosts();
                 } else {
                     $('#tm-posts-grid').html('<p class="tm-loading">Error loading posts.</p>');
                 }
@@ -25,6 +27,37 @@
                 $('#tm-posts-grid').html('<p class="tm-loading">Error loading posts.</p>');
             }
         });
+    }
+
+    function filterAndRenderPosts() {
+        var searchQuery = $('#tm-post-search').val().toLowerCase().trim();
+        var filterStatus = $('#tm-filter-status').val();
+
+        var filtered = allPosts.filter(function(post) {
+            var matchesSearch = true;
+            if (searchQuery !== '') {
+                matchesSearch = post.title.toLowerCase().indexOf(searchQuery) !== -1;
+            }
+            
+            var hasImage = post.thumbnail !== false;
+            var matchesFilter = true;
+            
+            if (filterStatus === 'with-image') {
+                matchesFilter = hasImage;
+            } else if (filterStatus === 'without-image') {
+                matchesFilter = !hasImage;
+            }
+            
+            return matchesSearch && matchesFilter;
+        });
+
+        renderPosts(filtered);
+    }
+
+    function resetFilters() {
+        $('#tm-post-search').val('');
+        $('#tm-filter-status').val('all');
+        filterAndRenderPosts();
     }
 
     function renderPosts(posts) {
@@ -241,7 +274,11 @@
                 if (response.success) {
                     alert('Thumbnail set successfully!');
                     closeModal();
-                    loadPosts();
+                    if (typeof loadPosts === 'function') {
+                        loadPosts();
+                    } else {
+                        location.reload();
+                    }
                 } else {
                     alert('Error: ' + (response.data.message || 'Failed to set thumbnail.'));
                     searchImages();
@@ -255,17 +292,60 @@
     }
 
     $(document).ready(function() {
-        loadPosts();
+        if (typeof allPosts !== 'undefined') {
+            loadPosts();
+        }
 
-        $(document).on('click', '.tm-generate-btn, .tm-regenerate-btn', function(e) {
+        $(document).on('click', '.tm-generate-btn, .tm-regenerate-btn, .tm-meta-generate', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
-            let card = $(this).closest('.tm-post-card');
-            let postId = card.data('post-id');
-            let postTitle = card.data('post-title');
+            var postId, postTitle;
+            if ($(this).hasClass('tm-meta-generate')) {
+                postId = $(this).data('post-id');
+                postTitle = $(this).data('post-title');
+            } else {
+                var card = $(this).closest('.tm-post-card');
+                postId = card.data('post-id');
+                postTitle = card.data('post-title');
+            }
             
             openModal(postId, postTitle);
+        });
+
+        $(document).on('click', '.tm-meta-remove', function(e) {
+            e.preventDefault();
+            
+            if (!confirm('Are you sure you want to remove the featured image?')) {
+                return;
+            }
+            
+            var $btn = $(this);
+            var postId = $btn.data('post-id');
+            
+            $btn.prop('disabled', true).text('Removing...');
+            
+            $.ajax({
+                url: tmData.ajaxUrl,
+                type: 'POST',
+                data: {
+                    action: 'tm_remove_thumbnail',
+                    nonce: tmData.nonce,
+                    post_id: postId
+                },
+                success: function(response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert('Error: ' + (response.data.message || 'Failed to remove thumbnail.'));
+                        $btn.prop('disabled', false).text('Remove Thumbnail');
+                    }
+                },
+                error: function() {
+                    alert('Error connecting to server.');
+                    $btn.prop('disabled', false).text('Remove Thumbnail');
+                }
+            });
         });
 
         $('.tm-modal-close').on('click', function() {
@@ -295,6 +375,27 @@
             if (e.key === 'Escape' && $('#tm-modal').is(':visible')) {
                 closeModal();
             }
+        });
+
+        $('#tm-apply-filter').on('click', function(e) {
+            e.preventDefault();
+            filterAndRenderPosts();
+        });
+
+        $('#tm-reset-filter').on('click', function(e) {
+            e.preventDefault();
+            resetFilters();
+        });
+
+        $('#tm-post-search').on('keypress', function(e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                filterAndRenderPosts();
+            }
+        });
+
+        $('#tm-filter-status').on('change', function() {
+            filterAndRenderPosts();
         });
     });
 
