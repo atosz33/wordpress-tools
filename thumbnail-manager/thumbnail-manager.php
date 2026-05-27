@@ -51,8 +51,8 @@ class TM_Thumbnail_Manager {
             return;
         }
         
-        wp_enqueue_style('tm-admin-css', plugins_url('assets/admin.css', __FILE__), array(), '1.0');
-        wp_enqueue_script('tm-admin-js', plugins_url('assets/admin.js', __FILE__), array('jquery'), '1.0', true);
+        wp_enqueue_style('tm-admin-css', plugins_url('assets/admin.css', __FILE__), array(), '1.1');
+        wp_enqueue_script('tm-admin-js', plugins_url('assets/admin.js', __FILE__), array('jquery'), '1.1', true);
         
         $post_id = 0;
         if ($is_post_edit && isset($_GET['post'])) {
