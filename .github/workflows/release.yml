@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       plugin_directory:
-        description: 'Plugin directory name (e.g., thumbnail-manager)'
+        description: 'Plugin to release'
         required: true
-        type: string
+        type: choice
+        options:
+          - thumbnail-manager
+          - post-scheduler
+          - tumblr-auto-reposter
       version:
         description: 'Version number (e.g., 0.3)'
         required: true

@@ -2,6 +2,27 @@
 
 A collection of WordPress plugins and tools.
 
+## Build
+
+Build a plugin zip from the command line:
+
+```bash
+./scripts/build-plugin.sh
+```
+
+The script lets you select:
+- `thumbnail-manager`
+- `post-scheduler`
+- `tumblr-auto-reposter`
+- `all`
+
+You can also pass the plugin directly:
+
+```bash
+./scripts/build-plugin.sh tumblr-auto-reposter
+./scripts/build-plugin.sh all
+```
+
 ## Plugins
 
 ### Thumbnail Manager
@@ -79,6 +100,39 @@ A WordPress admin tool to publish draft posts automatically through WP-Cron with
 **Screenshots:**
 
 ![Draft Post Scheduler Settings](docs/images/draft-post-scheduler.png)
+
+**Version:** 1.0.0
+
+---
+
+### Tumblr Auto Reposter
+
+A WordPress admin tool to repost article images to Tumblr automatically through WP-Cron.
+
+**Features:**
+- Connect Tumblr through OAuth using your own Tumblr app consumer key and secret
+- Displays the callback URL required by Tumblr app setup
+- Randomly selects one WordPress article and one image from that article per run
+- Creates Tumblr photo posts with the selected image, linked article title, and article URL
+- Configurable daily Tumblr post limit
+- Configurable image cooldown so the same image is not reused for X days
+- Supports featured images, attached media images, and images embedded in article content
+- Supports Tumblr queue, published, draft, and private states
+- Dry run mode, manual run button, image cooldown clearing, and admin logs
+
+**Requirements:**
+- WordPress 5.8 or higher
+- PHP 7.4 or higher
+- Tumblr app consumer key and secret
+
+**Installation:**
+1. Upload the `tumblr-auto-reposter` folder through WordPress admin or copy it to `/wp-content/plugins/`
+2. Activate the plugin
+3. Go to Settings -> Tumblr Reposter
+4. Copy the displayed callback URL into your Tumblr app settings
+5. Save the Tumblr consumer key, consumer secret, and target blog hostname
+6. Click Connect Tumblr and authorize the app
+7. Configure daily post count, cooldown, post state, image sources, and dry run mode
 
 **Version:** 1.0.0
 
