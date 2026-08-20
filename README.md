@@ -14,12 +14,15 @@ The script lets you select:
 - `thumbnail-manager`
 - `post-scheduler`
 - `tumblr-auto-reposter`
+- `reddit-to-wordpress`
+- `pod-designer`
 - `all`
 
 You can also pass the plugin directly:
 
 ```bash
 ./scripts/build-plugin.sh tumblr-auto-reposter
+./scripts/build-plugin.sh reddit-to-wordpress
 ./scripts/build-plugin.sh all
 ```
 
@@ -133,6 +136,92 @@ A WordPress admin tool to repost article images to Tumblr automatically through 
 5. Save the Tumblr consumer key, consumer secret, and target blog hostname
 6. Click Connect Tumblr and authorize the app
 7. Configure daily post count, cooldown, post state, image sources, and dry run mode
+
+**Version:** 1.0.0
+
+---
+
+### Reddit To WordPress
+
+A WordPress admin tool to fetch Reddit posts from configured subreddit rules and create WordPress posts through WP-Cron.
+
+**Features:**
+- Configure Reddit script-app credentials: client ID, client secret, username, password, and user agent
+- Test the Reddit account from the settings page
+- Add multiple subreddit rules with content type filters for images, GIFs, videos, links, and text
+- Choose Reddit listing methods per rule: hot, new, top, and rising
+- Set per-rule fetch intervals, checked by a 15-minute WP-Cron worker
+- Process every matching unposted item returned by a rule run, including up to 500 items from the `new` listing
+- Limit posts created per rule run to reduce PHP worker pressure during large imports
+- Prevent overlapping imports with a runtime lock
+- Show last run and next run timestamps for each subreddit rule
+- Publish as draft or live posts globally, with per-rule overrides
+- Use dry run mode and a dry run preview before creating posts
+- Create multiple post templates with placeholders and randomized template selection
+- Assign categories and tags from each template, including values like Reddit subreddit and author
+- Optionally bind one or more templates to a subreddit rule
+- Embed media by URL without downloading it into WordPress
+- Avoid duplicate posts by tracking Reddit post IDs
+
+**Requirements:**
+- WordPress 5.8 or higher
+- PHP 7.4 or higher
+- Reddit script app credentials
+
+**Installation:**
+1. Upload the `reddit-to-wordpress` folder through WordPress admin or copy it to `/wp-content/plugins/`
+2. Activate the plugin
+3. Go to Settings -> Reddit To WP
+4. Save Reddit credentials and click Test Reddit account
+5. Add subreddit rules and templates
+6. Keep dry run enabled until the logs and preview look correct, then switch to draft or publish mode
+
+**Version:** 1.0.0
+
+---
+
+### POD Designer
+
+A print-on-demand product designer: the customer places artwork and text on a t-shirt or mug mockup, and the admin gets the exact design plus print-ready files.
+
+**Features:**
+- Unlimited product templates, each with its own views (front, back, wrap), printable millimetre sizes and print areas
+- Draw the print area straight onto the mockup image in the admin, stored in percent so it survives image swaps
+- The bundled t-shirt and mug artwork is a reusable preset for any template: picking a built-in mockup also fills in the printable size, print area, non printable bands and the mug's cylinder wall
+- One click template duplication, so a second t-shirt that only differs in its colours does not have to be rebuilt
+- Configurable non printable bands at the top and bottom of each print area (a mug's rolled edges, for example), hatched in the designer and trimmed from the print-ready file
+- Full page designer: container, wide or full viewport width, overridable per shortcode and per WooCommerce product, with a configurable working area height
+- Mug templates carry their real diameter and height, so the 3D preview knows a 185 mm wrap covers only part of an 82 mm mug's circumference and leaves the rest for the handle
+- Per-template colours with a hex value that tints the mockup in multiply mode, or a dedicated uploaded mockup photo per colour and view
+- Layer editor with drag, corner scaling, rotation, layer ordering, keyboard nudging and deletion, with numeric fields next to the size and rotation sliders and a one click reset to 0 degrees
+- Out-of-bounds validation: any layer reaching outside the printable area is flagged with a red outline and a warning triangle, the reason is spelled out on the layer row, and submitting is blocked until it is fixed (0.05 mm tolerance, rotation aware)
+- The panel stacks below the product when the designer sits in a narrow column, so the working area stays usable inside a WooCommerce product summary
+- Text layers with font, millimetre size, colour and bold
+- Rotatable 3D mug preview that wraps the flat design around a cylinder, drawn on canvas without any external 3D library
+- Live DPI warning below the configured minimum, repeated on the admin production sheet
+- WooCommerce mode: assign a template to a product, the design travels with the cart item and the order item
+- Standalone mode: the `[pod_designer]` shortcode renders the designer with a submission form and an admin e-mail notification
+- Every submission is stored as a Design entry with preview images, print-ready PNGs, millimetre layer positions and a production status
+- Print-ready downloads in three flavours: transparent, flattened onto the ordered product colour, and flattened onto white, rendered on request so older designs get them too
+- Ships with built-in SVG t-shirt and mug mockups, so it works right after activation
+- Fully translatable and bilingual out of the box: English source strings with a bundled Hungarian translation, covering the admin screens, the designer canvas and the customer facing messages, so the plugin follows the WordPress site language
+
+**Requirements:**
+- WordPress 5.8 or higher
+- PHP 7.4 or higher
+- WooCommerce is optional; without it the plugin runs in standalone shortcode mode
+
+**Installation:**
+1. Upload the `pod-designer` folder through WordPress admin or copy it to `/wp-content/plugins/`
+2. Activate the plugin
+3. Go to POD Designer -> Product templates and adjust the mockups, print areas and colours
+4. Go to POD Designer -> Settings for upload limits, DPI values, fonts and the notification e-mail
+5. For WooCommerce, edit a product and pick a template under Product data -> General
+6. For standalone use, place `[pod_designer template="tshirt"]` on a page, optionally with `layout="full"`
+
+**Usage notes:**
+- Print-ready files are rendered in the browser and uploaded with the design, so `upload_max_filesize` and `post_max_size` should be at least 16 MB
+- Export resolution is capped to stay inside the canvas pixel budget mobile browsers accept, and the resolution actually used is recorded on the production sheet
 
 **Version:** 1.0.0
 

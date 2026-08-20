@@ -1,0 +1,1031 @@
+# Copyright (C) 2026 Attila Kis
+# This file is distributed under the same license as the POD Designer plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: POD Designer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-20 02:14\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Domain: pod-designer\n"
+
+#: includes/class-pod-designer-designs.php:54
+#: includes/class-pod-designer-settings.php:410
+#: includes/class-pod-designer-settings.php:588
+msgid "You do not have permission to do this."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:69
+msgid "No such print-ready file."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:75
+msgid "The print-ready file could not be found."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:89
+msgid "Burning the background in requires the PHP GD extension. Download the transparent file instead."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:140
+msgid "New"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:141
+msgid "In production"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:142
+msgid "Done"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:143
+msgid "Cancelled"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:151
+#: includes/class-pod-designer-designs.php:153
+msgid "Designs"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:152
+#: includes/class-pod-designer-designs.php:322
+msgid "Design"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:154
+msgid "Search designs"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:155
+msgid "No designs found."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:156
+msgid "No designs found in the trash."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:157
+msgid "View design"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:190
+msgid "Guest"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:287
+#: includes/class-pod-designer-designs.php:323
+#: includes/class-pod-designer-designs.php:509
+#: includes/class-pod-designer.php:334
+msgid "Product"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:290
+#: includes/class-pod-designer-designs.php:511
+#: includes/class-pod-designer-settings.php:376
+#: includes/class-pod-designer.php:404 includes/class-pod-designer.php:536
+msgid "Color"
+msgstr ""
+
+#. translators: 1: name of the printed side, 2: number of layers placed on it.
+#: includes/class-pod-designer-designs.php:299
+#, php-format
+msgid "%1$s (%2$d item)"
+msgid_plural "%1$s (%2$d items)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-pod-designer-designs.php:307
+msgid "Print"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:321
+msgid "Preview"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:324
+#: includes/class-pod-designer-designs.php:618
+#: includes/class-pod-designer-designs.php:698
+msgid "Customer"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:325
+msgid "Order"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:326
+#: includes/class-pod-designer-designs.php:602
+#: includes/class-pod-designer-settings.php:191
+msgid "Status"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:327
+msgid "Date"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:413
+msgid "What the customer saw"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:422
+msgid "Production sheet"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:431
+msgid "Customer and status"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:444
+msgid "No saved design data."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:459
+msgid "No preview image."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:465
+msgid "Download preview"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:474
+#: includes/class-pod-designer-woocommerce.php:416
+msgid "Print-ready – transparent"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:480
+msgid "Print-ready – on product color"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:486
+msgid "Print-ready – on white"
+msgstr ""
+
+#. translators: 1: print area width, 2: print area height, 3: optional DPI note.
+#: includes/class-pod-designer-designs.php:523
+#, php-format
+msgid "(%1$s × %2$s mm print area%3$s)"
+msgstr ""
+
+#. translators: %d: dots per inch of the print-ready file.
+#: includes/class-pod-designer-designs.php:528
+#, php-format
+msgid ", print-ready file: %d DPI"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:535
+msgid "Nothing is printed on this side."
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:540
+msgid "#"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:541
+msgid "Item"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:542
+msgid "Position (center, mm)"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:543
+msgid "Size (mm)"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:544
+#: includes/class-pod-designer.php:546
+msgid "Rotation"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:545
+msgid "Resolution"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:555
+#: includes/class-pod-designer.php:547 includes/class-pod-designer.php:566
+msgid "Text"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:560
+msgid "bold"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:560
+msgid "regular"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:568
+msgid "Open original image"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:629
+#: includes/class-pod-designer-designs.php:705
+#: includes/class-pod-designer.php:559
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:632
+#: includes/class-pod-designer-designs.php:708
+#: includes/class-pod-designer.php:560
+msgid "Note"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:643
+msgid "WooCommerce order"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:691
+#, php-format
+msgid "New design received: %s"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:699
+#: includes/class-pod-designer.php:557
+msgid "Email"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:702
+msgid "Phone"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:712
+msgid "Open it in the admin:"
+msgstr ""
+
+#: includes/class-pod-designer-designs.php:716
+#, php-format
+msgid "[%s] New design: %s"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:23
+#: includes/class-pod-designer-settings.php:24
+msgid "POD Designer"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:34
+#: includes/class-pod-designer-settings.php:35
+#: includes/class-pod-designer-settings.php:91
+msgid "Product templates"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:43
+#: includes/class-pod-designer-settings.php:44
+msgid "Settings"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:68
+msgid "Select mockup image"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:69
+msgid "Use image"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:70
+msgid "Delete this template? This cannot be undone once you save."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:71
+msgid "Delete this row?"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:72
+msgid "Pick a built-in mockup for this view first, or upload your own."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:73
+msgid "copy"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:94
+msgid "Templates saved."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:98
+msgid "Each template is one product (a t-shirt, a mug and so on). Views are the printable sides, and the print area marks the spot on the mockup image where the customer's artwork goes."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:100
+msgid "Embed in a page:"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:115
+msgid "+ New template"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:116
+msgid "Save templates"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:132
+msgid "New product"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:139
+#: includes/class-pod-designer.php:250
+msgid "Front"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:147
+#: includes/class-pod-designer.php:268 includes/class-pod-designer.php:299
+msgid "White"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:160
+msgid "Expand/collapse"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:161
+msgid "Duplicate"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:162
+msgid "Delete template"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:171
+#: includes/class-pod-designer-settings.php:373
+#: includes/class-pod-designer.php:556
+msgid "Name"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:175
+msgid "Slug (shortcode)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:178
+msgid "Generated from the name when left empty."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:182
+msgid "Type"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:185
+msgid "Flat product (t-shirt, tote bag, poster)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:186
+msgid "Mug (unwrapped cylinder)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:193
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:197
+msgid "3D preview"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:199
+msgid "Enable the rotatable 3D mug preview"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:203
+msgid "Mug dimensions"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:206
+msgid "Diameter (mm)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:210
+msgid "Height (mm)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:214
+msgid "The 3D preview is calculated from these. A 330 ml mug is typically 82 mm across and 95 mm tall, so its circumference is 258 mm, of which the 185 mm print covers 72%; the rest is where the handle sits."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:219
+msgid "Cylinder surface on the mockup (%)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:222
+msgid "The part of the mockup image that is the body of the mug (without the handle). This is what the 3D preview wraps around."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:227
+msgid "Views"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:233
+msgid "+ Add view"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:239
+msgid "New view"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:250
+msgid "Colors"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:251
+msgid "The hex color tints the mockup in multiply mode. If you need an exact photo for a given color, upload your own mockup image per view – that overrides the tinting."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:257
+msgid "+ Add color"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:262
+msgid "New color"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:276
+msgid "Left"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:277
+msgid "Top"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:278
+msgid "Width"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:279
+msgid "Height"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:310
+msgid "Built-in mockup"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:312
+msgid "— None / own image —"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:322
+msgid "Own image"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:323
+#: includes/class-pod-designer.php:540
+msgid "Delete"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:329
+msgid "Label"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:332
+msgid "Key"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:337
+msgid "Printable width (mm)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:340
+msgid "Printable height (mm)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:345
+msgid "Non-printable band at the top (%)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:348
+msgid "Non-printable band at the bottom (%)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:352
+msgid "Bands at the top and the bottom of the print area where the print does not come out well (typically 5-5% on a mug). The designer marks them with hatching and cuts them out of the print-ready file."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:356
+msgid "Print area on the mockup"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:358
+msgid "Select on the image"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:360
+msgid "Delete view"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:379
+msgid "Delete color"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:397
+#: includes/class-pod-designer.php:565
+msgid "Image"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:398
+msgid "X"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:473
+msgid "POD Designer settings"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:476
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:485
+msgid "Notification email"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:488
+msgid "Notifications about shortcode (non-WooCommerce) submissions are sent here."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:492
+msgid "Guest uploads"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:494
+msgid "Allow uploading images and submitting designs without logging in"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:498
+msgid "Max upload (MB)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:502
+msgid "Minimum DPI warning"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:505
+msgid "Below this the designer warns the customer that the image may look blurry."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:509
+msgid "Print-ready file DPI"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:512
+msgid "300 DPI is the usual print value. A higher value means a bigger file and slower saving."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:516
+msgid "Preview image width (px)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:520
+#: includes/class-pod-designer-woocommerce.php:124
+msgid "Designer width"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:523
+msgid "The theme's content width"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:524
+msgid "Wide (max. 1500 px, extends past the content)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:525
+msgid "Full screen width"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:527
+msgid "Can be overridden per shortcode: [pod_designer template=\"mug\" layout=\"full\"]"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:531
+msgid "Workspace height (vh)"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:534
+msgid "The product image takes up at most this much of the browser window height. 74 = 74% of the window."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:538
+msgid "Features"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:540
+msgid "Enable text layers"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:541
+msgid "Enable the 3D mug preview globally"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:542
+msgid "Require a phone number on the submission form"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:546
+msgid "Fonts"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:549
+msgid "One per line: Display name|CSS font-family. Only list fonts that are available on the visitor's machine or in the theme."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:553
+msgid "Submit button label"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:557
+msgid "Cart button label"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:561
+msgid "Successful submission message"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:565
+msgid "Uninstall"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:567
+msgid "Delete designs and settings when the plugin is deleted"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:572
+msgid "Save settings"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:575
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:577
+msgid "WooCommerce is active. On a product you can pick the designer template under Product data → General."
+msgstr ""
+
+#: includes/class-pod-designer-settings.php:579
+msgid "WooCommerce is not active, so the designer runs in standalone (shortcode) mode: submitted designs show up under the Designs menu."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:63
+msgid "the product has no price"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:65
+msgid "the product is out of stock"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:74
+msgid "POD Designer:"
+msgstr ""
+
+#. translators: %s: reason the product is not purchasable.
+#: includes/class-pod-designer-woocommerce.php:77
+#, php-format
+msgid "the designer will not show up on the product page because %s. WooCommerce does not render the add-to-cart form in that case, and the designer lives inside that form. Set a real price and save the product again."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:104
+msgid "— No designer —"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:116
+msgid "POD Designer template"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:117
+msgid "When set, the customer can design the product on the product page and the design is attached to the order."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:125
+msgid "On a product page, wide and full screen overlap the product gallery in most themes, so this stays inside the product column by default."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:128
+msgid "Inside the product column (default)"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:129
+msgid "Inside the product column"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:130
+msgid "Wide"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:131
+msgid "Full screen"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:216
+msgid "Design it"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:248
+msgid "Design the product before you add it to the cart."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:253
+msgid "This design already belongs to a placed order. Please design it again."
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:338
+msgid "The customer's design"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:422
+msgid "on product color"
+msgstr ""
+
+#: includes/class-pod-designer-woocommerce.php:432
+msgid "Full production sheet"
+msgstr ""
+
+#: includes/class-pod-designer.php:121
+msgid "Send order"
+msgstr ""
+
+#: includes/class-pod-designer.php:122
+msgid "Add to cart"
+msgstr ""
+
+#: includes/class-pod-designer.php:123
+msgid "Thank you! We have received your design and will get in touch shortly."
+msgstr ""
+
+#: includes/class-pod-designer.php:201
+msgid "T-shirt – front (297 × 420 mm)"
+msgstr ""
+
+#: includes/class-pod-designer.php:209
+msgid "T-shirt – back (297 × 420 mm)"
+msgstr ""
+
+#: includes/class-pod-designer.php:217
+msgid "Mug – unwrapped (185 × 90 mm)"
+msgstr ""
+
+#: includes/class-pod-designer.php:241
+msgid "T-shirt"
+msgstr ""
+
+#: includes/class-pod-designer.php:259
+msgid "Back"
+msgstr ""
+
+#: includes/class-pod-designer.php:269 includes/class-pod-designer.php:300
+msgid "Black"
+msgstr ""
+
+#: includes/class-pod-designer.php:270
+msgid "Navy"
+msgstr ""
+
+#: includes/class-pod-designer.php:271
+msgid "Red"
+msgstr ""
+
+#: includes/class-pod-designer.php:272
+msgid "Grey"
+msgstr ""
+
+#: includes/class-pod-designer.php:277
+msgid "Mug"
+msgstr ""
+
+#: includes/class-pod-designer.php:288
+msgid "Wrap print"
+msgstr ""
+
+#: includes/class-pod-designer.php:363
+#, php-format
+msgid "View %d"
+msgstr ""
+
+#: includes/class-pod-designer.php:534
+msgid "Upload image"
+msgstr ""
+
+#: includes/class-pod-designer.php:535
+msgid "Add text"
+msgstr ""
+
+#: includes/class-pod-designer.php:537
+msgid "Print side"
+msgstr ""
+
+#: includes/class-pod-designer.php:538
+msgid "Layers"
+msgstr ""
+
+#: includes/class-pod-designer.php:539
+msgid "There is nothing on this side yet."
+msgstr ""
+
+#: includes/class-pod-designer.php:541
+msgid "Forward"
+msgstr ""
+
+#: includes/class-pod-designer.php:542
+msgid "Backward"
+msgstr ""
+
+#: includes/class-pod-designer.php:543
+msgid "Center"
+msgstr ""
+
+#: includes/class-pod-designer.php:544
+msgid "Fit"
+msgstr ""
+
+#: includes/class-pod-designer.php:545
+msgid "Size"
+msgstr ""
+
+#: includes/class-pod-designer.php:548
+msgid "Font"
+msgstr ""
+
+#: includes/class-pod-designer.php:549
+msgid "Font size"
+msgstr ""
+
+#: includes/class-pod-designer.php:550
+msgid "Text color"
+msgstr ""
+
+#: includes/class-pod-designer.php:551
+msgid "Bold"
+msgstr ""
+
+#: includes/class-pod-designer.php:552
+msgid "Not printable"
+msgstr ""
+
+#: includes/class-pod-designer.php:553
+msgid "2D view"
+msgstr ""
+
+#: includes/class-pod-designer.php:554
+msgid "3D view"
+msgstr ""
+
+#: includes/class-pod-designer.php:555
+msgid "Auto rotate"
+msgstr ""
+
+#: includes/class-pod-designer.php:558
+msgid "Phone number"
+msgstr ""
+
+#: includes/class-pod-designer.php:561
+msgid "Saving…"
+msgstr ""
+
+#: includes/class-pod-designer.php:562
+msgid "Low resolution – the print may look blurry."
+msgstr ""
+
+#: includes/class-pod-designer.php:563
+msgid "Drop an image here, or click to browse."
+msgstr ""
+
+#: includes/class-pod-designer.php:564
+msgid "The image could not be loaded: "
+msgstr ""
+
+#: includes/class-pod-designer.php:567
+msgid "left"
+msgstr ""
+
+#: includes/class-pod-designer.php:568
+msgid "right"
+msgstr ""
+
+#: includes/class-pod-designer.php:569
+msgid "top"
+msgstr ""
+
+#: includes/class-pod-designer.php:570
+msgid "bottom"
+msgstr ""
+
+#: includes/class-pod-designer.php:571
+#, php-format
+msgid "Outside the printable area (%s)."
+msgstr ""
+
+#: includes/class-pod-designer.php:572
+msgid "One item is outside the printable area. Move it back before you submit."
+msgstr ""
+
+#: includes/class-pod-designer.php:573
+#, php-format
+msgid "%s items are outside the printable area. Move them back before you submit."
+msgstr ""
+
+#: includes/class-pod-designer.php:574
+msgid "The design is saved together with the cart item."
+msgstr ""
+
+#: includes/class-pod-designer.php:575
+msgid "Select an item to edit it."
+msgstr ""
+
+#: includes/class-pod-designer.php:576
+#, php-format
+msgid "The file is too large (max. %s MB)."
+msgstr ""
+
+#: includes/class-pod-designer.php:577
+msgid "Uploading image…"
+msgstr ""
+
+#: includes/class-pod-designer.php:578
+msgid "Upload failed."
+msgstr ""
+
+#: includes/class-pod-designer.php:579 includes/class-pod-designer.php:878
+msgid "Upload at least one image or add some text."
+msgstr ""
+
+#: includes/class-pod-designer.php:580
+msgid "Saving failed."
+msgstr ""
+
+#: includes/class-pod-designer.php:581 includes/class-pod-designer.php:887
+msgid "Enter your name."
+msgstr ""
+
+#: includes/class-pod-designer.php:582 includes/class-pod-designer.php:883
+msgid "Enter a valid email address."
+msgstr ""
+
+#: includes/class-pod-designer.php:583 includes/class-pod-designer.php:891
+msgid "Enter your phone number."
+msgstr ""
+
+#: includes/class-pod-designer.php:584
+msgid "Back to 0°"
+msgstr ""
+
+#: includes/class-pod-designer.php:610
+msgid "No designer template is available."
+msgstr ""
+
+#: includes/class-pod-designer.php:715
+msgid "Loading the designer…"
+msgstr ""
+
+#: includes/class-pod-designer.php:717
+msgid "You need to enable JavaScript to use the designer."
+msgstr ""
+
+#: includes/class-pod-designer.php:731
+msgid "Your session expired, please reload the page."
+msgstr ""
+
+#: includes/class-pod-designer.php:737
+msgid "You need to log in to use the designer."
+msgstr ""
+
+#: includes/class-pod-designer.php:754
+msgid "Too many uploads in a short time. Please try again later."
+msgstr ""
+
+#: includes/class-pod-designer.php:773
+msgid "Missing file."
+msgstr ""
+
+#: includes/class-pod-designer.php:779
+msgid "The file could not be uploaded."
+msgstr ""
+
+#: includes/class-pod-designer.php:783
+msgid "The file is too large."
+msgstr ""
+
+#: includes/class-pod-designer.php:787
+msgid "You can only upload image files."
+msgstr ""
+
+#: includes/class-pod-designer.php:813
+msgid "The file could not be saved."
+msgstr ""
+
+#: includes/class-pod-designer.php:853
+msgid "Invalid data."
+msgstr ""
+
+#: includes/class-pod-designer.php:859
+msgid "Unknown product template."
+msgstr ""
+
+#: includes/class-pod-designer.php:865
+msgid "The design is empty."
+msgstr ""
+
+#: includes/class-pod-designer.php:898
+#, php-format
+msgid "%1$s – preview (%2$s)"
+msgstr ""
+
+#: includes/class-pod-designer.php:899
+#, php-format
+msgid "%1$s – print-ready (%2$s)"
+msgstr ""

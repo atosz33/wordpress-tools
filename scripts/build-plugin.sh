@@ -8,6 +8,8 @@ PLUGINS=(
   "thumbnail-manager"
   "post-scheduler"
   "tumblr-auto-reposter"
+  "reddit-to-wordpress"
+  "pod-designer"
 )
 
 usage() {
@@ -38,7 +40,9 @@ choose_plugin() {
   printf '  1) thumbnail-manager\n'
   printf '  2) post-scheduler\n'
   printf '  3) tumblr-auto-reposter\n'
-  printf '  4) all\n'
+  printf '  4) reddit-to-wordpress\n'
+  printf '  5) pod-designer\n'
+  printf '  6) all\n'
   printf 'Choice: '
   read -r choice
 
@@ -46,7 +50,9 @@ choose_plugin() {
     1) PLUGIN="thumbnail-manager" ;;
     2) PLUGIN="post-scheduler" ;;
     3) PLUGIN="tumblr-auto-reposter" ;;
-    4) PLUGIN="all" ;;
+    4) PLUGIN="reddit-to-wordpress" ;;
+    5) PLUGIN="pod-designer" ;;
+    6) PLUGIN="all" ;;
     *) printf 'Invalid selection: %s\n' "$choice" >&2; exit 1 ;;
   esac
 }
@@ -68,6 +74,7 @@ build_plugin() {
       -x '*.git*' \
       -x '*node_modules*' \
       -x '*.DS_Store' \
+      -x '*.swp' \
       -x '*.zip'
   )
 

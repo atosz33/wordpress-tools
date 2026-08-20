@@ -1,0 +1,1031 @@
+# Hungarian translation for the POD Designer plugin.
+# Copyright (C) 2026 Attila Kis
+msgid ""
+msgstr ""
+"Project-Id-Version: POD Designer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-20 02:14\n"
+"PO-Revision-Date: 2026-08-20 02:14\n"
+"Last-Translator: Attila Kis\n"
+"Language-Team: Hungarian\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: pod-designer\n"
+
+#: includes/class-pod-designer-designs.php:54
+#: includes/class-pod-designer-settings.php:410
+#: includes/class-pod-designer-settings.php:588
+msgid "You do not have permission to do this."
+msgstr "Nincs jogosultságod ehhez."
+
+#: includes/class-pod-designer-designs.php:69
+msgid "No such print-ready file."
+msgstr "Nincs ilyen nyomdakész fájl."
+
+#: includes/class-pod-designer-designs.php:75
+msgid "The print-ready file could not be found."
+msgstr "A nyomdakész fájl nem található."
+
+#: includes/class-pod-designer-designs.php:89
+msgid "Burning the background in requires the PHP GD extension. Download the transparent file instead."
+msgstr "A háttér ráégetéséhez a PHP GD kiterjesztés kell. Töltsd le helyette az átlátszó fájlt."
+
+#: includes/class-pod-designer-designs.php:140
+msgid "New"
+msgstr "Új"
+
+#: includes/class-pod-designer-designs.php:141
+msgid "In production"
+msgstr "Gyártásban"
+
+#: includes/class-pod-designer-designs.php:142
+msgid "Done"
+msgstr "Kész"
+
+#: includes/class-pod-designer-designs.php:143
+msgid "Cancelled"
+msgstr "Törölve"
+
+#: includes/class-pod-designer-designs.php:151
+#: includes/class-pod-designer-designs.php:153
+msgid "Designs"
+msgstr "Designok"
+
+#: includes/class-pod-designer-designs.php:152
+#: includes/class-pod-designer-designs.php:322
+msgid "Design"
+msgstr "Design"
+
+#: includes/class-pod-designer-designs.php:154
+msgid "Search designs"
+msgstr "Designok keresése"
+
+#: includes/class-pod-designer-designs.php:155
+msgid "No designs found."
+msgstr "Nincs design."
+
+#: includes/class-pod-designer-designs.php:156
+msgid "No designs found in the trash."
+msgstr "Nincs design a lomtárban."
+
+#: includes/class-pod-designer-designs.php:157
+msgid "View design"
+msgstr "Design megtekintése"
+
+#: includes/class-pod-designer-designs.php:190
+msgid "Guest"
+msgstr "Vendég"
+
+#: includes/class-pod-designer-designs.php:287
+#: includes/class-pod-designer-designs.php:323
+#: includes/class-pod-designer-designs.php:509
+#: includes/class-pod-designer.php:334
+msgid "Product"
+msgstr "Termék"
+
+#: includes/class-pod-designer-designs.php:290
+#: includes/class-pod-designer-designs.php:511
+#: includes/class-pod-designer-settings.php:376
+#: includes/class-pod-designer.php:404 includes/class-pod-designer.php:536
+msgid "Color"
+msgstr "Szín"
+
+#. translators: 1: name of the printed side, 2: number of layers placed on it.
+#: includes/class-pod-designer-designs.php:299
+#, php-format
+msgid "%1$s (%2$d item)"
+msgid_plural "%1$s (%2$d items)"
+msgstr[0] "%1$s (%2$d elem)"
+msgstr[1] "%1$s (%2$d elem)"
+
+#: includes/class-pod-designer-designs.php:307
+msgid "Print"
+msgstr "Nyomat"
+
+#: includes/class-pod-designer-designs.php:321
+msgid "Preview"
+msgstr "Előnézet"
+
+#: includes/class-pod-designer-designs.php:324
+#: includes/class-pod-designer-designs.php:618
+#: includes/class-pod-designer-designs.php:698
+msgid "Customer"
+msgstr "Megrendelő"
+
+#: includes/class-pod-designer-designs.php:325
+msgid "Order"
+msgstr "Rendelés"
+
+#: includes/class-pod-designer-designs.php:326
+#: includes/class-pod-designer-designs.php:602
+#: includes/class-pod-designer-settings.php:191
+msgid "Status"
+msgstr "Állapot"
+
+#: includes/class-pod-designer-designs.php:327
+msgid "Date"
+msgstr "Dátum"
+
+#: includes/class-pod-designer-designs.php:413
+msgid "What the customer saw"
+msgstr "Amit a megrendelő látott"
+
+#: includes/class-pod-designer-designs.php:422
+msgid "Production sheet"
+msgstr "Gyártási adatlap"
+
+#: includes/class-pod-designer-designs.php:431
+msgid "Customer and status"
+msgstr "Megrendelő és állapot"
+
+#: includes/class-pod-designer-designs.php:444
+msgid "No saved design data."
+msgstr "Nincs mentett design adat."
+
+#: includes/class-pod-designer-designs.php:459
+msgid "No preview image."
+msgstr "Nincs előnézeti kép."
+
+#: includes/class-pod-designer-designs.php:465
+msgid "Download preview"
+msgstr "Előnézet letöltése"
+
+#: includes/class-pod-designer-designs.php:474
+#: includes/class-pod-designer-woocommerce.php:416
+msgid "Print-ready – transparent"
+msgstr "Nyomdakész – átlátszó"
+
+#: includes/class-pod-designer-designs.php:480
+msgid "Print-ready – on product color"
+msgstr "Nyomdakész – termékszínen"
+
+#: includes/class-pod-designer-designs.php:486
+msgid "Print-ready – on white"
+msgstr "Nyomdakész – fehéren"
+
+#. translators: 1: print area width, 2: print area height, 3: optional DPI note.
+#: includes/class-pod-designer-designs.php:523
+#, php-format
+msgid "(%1$s × %2$s mm print area%3$s)"
+msgstr "(%1$s × %2$s mm nyomtatható terület%3$s)"
+
+#. translators: %d: dots per inch of the print-ready file.
+#: includes/class-pod-designer-designs.php:528
+#, php-format
+msgid ", print-ready file: %d DPI"
+msgstr ", nyomdakész fájl: %d DPI"
+
+#: includes/class-pod-designer-designs.php:535
+msgid "Nothing is printed on this side."
+msgstr "Ezen az oldalon nincs nyomat."
+
+#: includes/class-pod-designer-designs.php:540
+msgid "#"
+msgstr "#"
+
+#: includes/class-pod-designer-designs.php:541
+msgid "Item"
+msgstr "Elem"
+
+#: includes/class-pod-designer-designs.php:542
+msgid "Position (center, mm)"
+msgstr "Pozíció (közép, mm)"
+
+#: includes/class-pod-designer-designs.php:543
+msgid "Size (mm)"
+msgstr "Méret (mm)"
+
+#: includes/class-pod-designer-designs.php:544
+#: includes/class-pod-designer.php:546
+msgid "Rotation"
+msgstr "Forgatás"
+
+#: includes/class-pod-designer-designs.php:545
+msgid "Resolution"
+msgstr "Felbontás"
+
+#: includes/class-pod-designer-designs.php:555
+#: includes/class-pod-designer.php:547 includes/class-pod-designer.php:566
+msgid "Text"
+msgstr "Szöveg"
+
+#: includes/class-pod-designer-designs.php:560
+msgid "bold"
+msgstr "félkövér"
+
+#: includes/class-pod-designer-designs.php:560
+msgid "regular"
+msgstr "normál"
+
+#: includes/class-pod-designer-designs.php:568
+msgid "Open original image"
+msgstr "Eredeti kép megnyitása"
+
+#: includes/class-pod-designer-designs.php:629
+#: includes/class-pod-designer-designs.php:705
+#: includes/class-pod-designer.php:559
+msgid "Quantity"
+msgstr "Darabszám"
+
+#: includes/class-pod-designer-designs.php:632
+#: includes/class-pod-designer-designs.php:708
+#: includes/class-pod-designer.php:560
+msgid "Note"
+msgstr "Megjegyzés"
+
+#: includes/class-pod-designer-designs.php:643
+msgid "WooCommerce order"
+msgstr "WooCommerce rendelés"
+
+#: includes/class-pod-designer-designs.php:691
+#, php-format
+msgid "New design received: %s"
+msgstr "Új design érkezett: %s"
+
+#: includes/class-pod-designer-designs.php:699
+#: includes/class-pod-designer.php:557
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/class-pod-designer-designs.php:702
+msgid "Phone"
+msgstr "Telefon"
+
+#: includes/class-pod-designer-designs.php:712
+msgid "Open it in the admin:"
+msgstr "Megnyitás az adminban:"
+
+#: includes/class-pod-designer-designs.php:716
+#, php-format
+msgid "[%s] New design: %s"
+msgstr "[%s] Új design: %s"
+
+#: includes/class-pod-designer-settings.php:23
+#: includes/class-pod-designer-settings.php:24
+msgid "POD Designer"
+msgstr "POD Designer"
+
+#: includes/class-pod-designer-settings.php:34
+#: includes/class-pod-designer-settings.php:35
+#: includes/class-pod-designer-settings.php:91
+msgid "Product templates"
+msgstr "Termék sablonok"
+
+#: includes/class-pod-designer-settings.php:43
+#: includes/class-pod-designer-settings.php:44
+msgid "Settings"
+msgstr "Beállítások"
+
+#: includes/class-pod-designer-settings.php:68
+msgid "Select mockup image"
+msgstr "Mockup kép kiválasztása"
+
+#: includes/class-pod-designer-settings.php:69
+msgid "Use image"
+msgstr "Kép használata"
+
+#: includes/class-pod-designer-settings.php:70
+msgid "Delete this template? This cannot be undone once you save."
+msgstr "Biztosan törlöd ezt a sablont? A mentés után nem visszavonható."
+
+#: includes/class-pod-designer-settings.php:71
+msgid "Delete this row?"
+msgstr "Biztosan törlöd ezt a sort?"
+
+#: includes/class-pod-designer-settings.php:72
+msgid "Pick a built-in mockup for this view first, or upload your own."
+msgstr "Ehhez a nézethez előbb válassz beépített mockupot, vagy tölts fel sajátot."
+
+#: includes/class-pod-designer-settings.php:73
+msgid "copy"
+msgstr "másolat"
+
+#: includes/class-pod-designer-settings.php:94
+msgid "Templates saved."
+msgstr "Sablonok mentve."
+
+#: includes/class-pod-designer-settings.php:98
+msgid "Each template is one product (a t-shirt, a mug and so on). Views are the printable sides, and the print area marks the spot on the mockup image where the customer's artwork goes."
+msgstr "Minden sablon egy termék (pl. póló, bögre). A nézetek adják a nyomtatható oldalakat, a nyomtatási terület pedig azt jelöli ki a mockup képen, ahová a megrendelő grafikája kerül."
+
+#: includes/class-pod-designer-settings.php:100
+msgid "Embed in a page:"
+msgstr "Beillesztés oldalba:"
+
+#: includes/class-pod-designer-settings.php:115
+msgid "+ New template"
+msgstr "+ Új sablon"
+
+#: includes/class-pod-designer-settings.php:116
+msgid "Save templates"
+msgstr "Sablonok mentése"
+
+#: includes/class-pod-designer-settings.php:132
+msgid "New product"
+msgstr "Új termék"
+
+#: includes/class-pod-designer-settings.php:139
+#: includes/class-pod-designer.php:250
+msgid "Front"
+msgstr "Elöl"
+
+#: includes/class-pod-designer-settings.php:147
+#: includes/class-pod-designer.php:268 includes/class-pod-designer.php:299
+msgid "White"
+msgstr "Fehér"
+
+#: includes/class-pod-designer-settings.php:160
+msgid "Expand/collapse"
+msgstr "Ki-/becsukás"
+
+#: includes/class-pod-designer-settings.php:161
+msgid "Duplicate"
+msgstr "Másolat készítése"
+
+#: includes/class-pod-designer-settings.php:162
+msgid "Delete template"
+msgstr "Sablon törlése"
+
+#: includes/class-pod-designer-settings.php:171
+#: includes/class-pod-designer-settings.php:373
+#: includes/class-pod-designer.php:556
+msgid "Name"
+msgstr "Név"
+
+#: includes/class-pod-designer-settings.php:175
+msgid "Slug (shortcode)"
+msgstr "Azonosító (shortcode)"
+
+#: includes/class-pod-designer-settings.php:178
+msgid "Generated from the name when left empty."
+msgstr "Üresen hagyva a névből készül."
+
+#: includes/class-pod-designer-settings.php:182
+msgid "Type"
+msgstr "Típus"
+
+#: includes/class-pod-designer-settings.php:185
+msgid "Flat product (t-shirt, tote bag, poster)"
+msgstr "Sík termék (póló, vászontáska, poszter)"
+
+#: includes/class-pod-designer-settings.php:186
+msgid "Mug (unwrapped cylinder)"
+msgstr "Bögre (kiterített henger)"
+
+#: includes/class-pod-designer-settings.php:193
+msgid "Enabled"
+msgstr "Aktív"
+
+#: includes/class-pod-designer-settings.php:197
+msgid "3D preview"
+msgstr "3D előnézet"
+
+#: includes/class-pod-designer-settings.php:199
+msgid "Enable the rotatable 3D mug preview"
+msgstr "Forgatható 3D bögre előnézet engedélyezése"
+
+#: includes/class-pod-designer-settings.php:203
+msgid "Mug dimensions"
+msgstr "Bögre méretei"
+
+#: includes/class-pod-designer-settings.php:206
+msgid "Diameter (mm)"
+msgstr "Átmérő (mm)"
+
+#: includes/class-pod-designer-settings.php:210
+msgid "Height (mm)"
+msgstr "Magasság (mm)"
+
+#: includes/class-pod-designer-settings.php:214
+msgid "The 3D preview is calculated from these. A 330 ml mug is typically 82 mm across and 95 mm tall, so its circumference is 258 mm, of which the 185 mm print covers 72%; the rest is where the handle sits."
+msgstr "A 3D előnézet ebből számol. Egy 330 ml-es bögre tipikusan 82 mm átmérőjű és 95 mm magas: a kerülete így 258 mm, amiből a 185 mm-es nyomat 72%-ot fed le, a többi a fül helye."
+
+#: includes/class-pod-designer-settings.php:219
+msgid "Cylinder surface on the mockup (%)"
+msgstr "Henger palást a mockupon (%)"
+
+#: includes/class-pod-designer-settings.php:222
+msgid "The part of the mockup image that is the body of the mug (without the handle). This is what the 3D preview wraps around."
+msgstr "A mockup képnek az a része, ami a bögre palástja (fül nélkül). Ezt tekeri körbe a 3D előnézet."
+
+#: includes/class-pod-designer-settings.php:227
+msgid "Views"
+msgstr "Nézetek"
+
+#: includes/class-pod-designer-settings.php:233
+msgid "+ Add view"
+msgstr "+ Nézet hozzáadása"
+
+#: includes/class-pod-designer-settings.php:239
+msgid "New view"
+msgstr "Új nézet"
+
+#: includes/class-pod-designer-settings.php:250
+msgid "Colors"
+msgstr "Színek"
+
+#: includes/class-pod-designer-settings.php:251
+msgid "The hex color tints the mockup in multiply mode. If you need an exact photo for a given color, upload your own mockup image per view – that overrides the tinting."
+msgstr "A hex szín szorzó (multiply) módban színezi a mockupot. Ha pontos fotót akarsz egy adott színhez, tölts fel nézetenként saját mockup képet – az felülírja a színezést."
+
+#: includes/class-pod-designer-settings.php:257
+msgid "+ Add color"
+msgstr "+ Szín hozzáadása"
+
+#: includes/class-pod-designer-settings.php:262
+msgid "New color"
+msgstr "Új szín"
+
+#: includes/class-pod-designer-settings.php:276
+msgid "Left"
+msgstr "Bal"
+
+#: includes/class-pod-designer-settings.php:277
+msgid "Top"
+msgstr "Felül"
+
+#: includes/class-pod-designer-settings.php:278
+msgid "Width"
+msgstr "Szélesség"
+
+#: includes/class-pod-designer-settings.php:279
+msgid "Height"
+msgstr "Magasság"
+
+#: includes/class-pod-designer-settings.php:310
+msgid "Built-in mockup"
+msgstr "Beépített mockup"
+
+#: includes/class-pod-designer-settings.php:312
+msgid "— None / own image —"
+msgstr "— Nincs / saját kép —"
+
+#: includes/class-pod-designer-settings.php:322
+msgid "Own image"
+msgstr "Saját kép"
+
+#: includes/class-pod-designer-settings.php:323
+#: includes/class-pod-designer.php:540
+msgid "Delete"
+msgstr "Törlés"
+
+#: includes/class-pod-designer-settings.php:329
+msgid "Label"
+msgstr "Megnevezés"
+
+#: includes/class-pod-designer-settings.php:332
+msgid "Key"
+msgstr "Kulcs"
+
+#: includes/class-pod-designer-settings.php:337
+msgid "Printable width (mm)"
+msgstr "Nyomtatható szélesség (mm)"
+
+#: includes/class-pod-designer-settings.php:340
+msgid "Printable height (mm)"
+msgstr "Nyomtatható magasság (mm)"
+
+#: includes/class-pod-designer-settings.php:345
+msgid "Non-printable band at the top (%)"
+msgstr "Nem nyomtatható sáv felül (%)"
+
+#: includes/class-pod-designer-settings.php:348
+msgid "Non-printable band at the bottom (%)"
+msgstr "Nem nyomtatható sáv alul (%)"
+
+#: includes/class-pod-designer-settings.php:352
+msgid "Bands at the top and the bottom of the print area where the print does not come out well (typically 5-5% on a mug). The designer marks them with hatching and cuts them out of the print-ready file."
+msgstr "A nyomtatási terület tetején és alján lévő sávok, ahol a nyomat nem jön ki jól (bögrénél tipikusan 5-5%). A designer ezeket sraffozva jelzi, és a nyomdakész fájlból kivágja."
+
+#: includes/class-pod-designer-settings.php:356
+msgid "Print area on the mockup"
+msgstr "Nyomtatási terület a mockupon"
+
+#: includes/class-pod-designer-settings.php:358
+msgid "Select on the image"
+msgstr "Kijelölés a képen"
+
+#: includes/class-pod-designer-settings.php:360
+msgid "Delete view"
+msgstr "Nézet törlése"
+
+#: includes/class-pod-designer-settings.php:379
+msgid "Delete color"
+msgstr "Szín törlése"
+
+#: includes/class-pod-designer-settings.php:397
+#: includes/class-pod-designer.php:565
+msgid "Image"
+msgstr "Kép"
+
+#: includes/class-pod-designer-settings.php:398
+msgid "X"
+msgstr "X"
+
+#: includes/class-pod-designer-settings.php:473
+msgid "POD Designer settings"
+msgstr "POD Designer beállítások"
+
+#: includes/class-pod-designer-settings.php:476
+msgid "Settings saved."
+msgstr "Beállítások mentve."
+
+#: includes/class-pod-designer-settings.php:485
+msgid "Notification email"
+msgstr "Értesítési e-mail"
+
+#: includes/class-pod-designer-settings.php:488
+msgid "Notifications about shortcode (non-WooCommerce) submissions are sent here."
+msgstr "Ide megy értesítés a shortcode-os (nem WooCommerce) bekűldésekről."
+
+#: includes/class-pod-designer-settings.php:492
+msgid "Guest uploads"
+msgstr "Vendég feltöltés"
+
+#: includes/class-pod-designer-settings.php:494
+msgid "Allow uploading images and submitting designs without logging in"
+msgstr "Bejelentkezés nélkül is lehet képet feltölteni és designt beküldeni"
+
+#: includes/class-pod-designer-settings.php:498
+msgid "Max upload (MB)"
+msgstr "Max. feltöltés (MB)"
+
+#: includes/class-pod-designer-settings.php:502
+msgid "Minimum DPI warning"
+msgstr "Minimum DPI figyelmeztetés"
+
+#: includes/class-pod-designer-settings.php:505
+msgid "Below this the designer warns the customer that the image may look blurry."
+msgstr "Ez alatt a designer figyelmezteti a megrendelőt, hogy a kép elmosódott lehet."
+
+#: includes/class-pod-designer-settings.php:509
+msgid "Print-ready file DPI"
+msgstr "Nyomdakész fájl DPI"
+
+#: includes/class-pod-designer-settings.php:512
+msgid "300 DPI is the usual print value. A higher value means a bigger file and slower saving."
+msgstr "300 DPI az általános nyomdai érték. Magasabb érték nagyobb fájlt és lassabb mentést jelent."
+
+#: includes/class-pod-designer-settings.php:516
+msgid "Preview image width (px)"
+msgstr "Előnézeti kép szélessége (px)"
+
+#: includes/class-pod-designer-settings.php:520
+#: includes/class-pod-designer-woocommerce.php:124
+msgid "Designer width"
+msgstr "Designer szélessége"
+
+#: includes/class-pod-designer-settings.php:523
+msgid "The theme's content width"
+msgstr "A téma tartalmi szélessége"
+
+#: includes/class-pod-designer-settings.php:524
+msgid "Wide (max. 1500 px, extends past the content)"
+msgstr "Széles (max. 1500 px, kilóg a tartalomból)"
+
+#: includes/class-pod-designer-settings.php:525
+msgid "Full screen width"
+msgstr "Teljes képernyő szélesség"
+
+#: includes/class-pod-designer-settings.php:527
+msgid "Can be overridden per shortcode: [pod_designer template=\"mug\" layout=\"full\"]"
+msgstr "Shortcode-onként felülírható: [pod_designer template=\"bogre\" layout=\"full\"]"
+
+#: includes/class-pod-designer-settings.php:531
+msgid "Workspace height (vh)"
+msgstr "Munkaterület magassága (vh)"
+
+#: includes/class-pod-designer-settings.php:534
+msgid "The product image takes up at most this much of the browser window height. 74 = 74% of the window."
+msgstr "A termékkép legfeljebb ekkora részét foglalja el a böngészőablak magasságából. 74 = az ablak 74%-a."
+
+#: includes/class-pod-designer-settings.php:538
+msgid "Features"
+msgstr "Funkciók"
+
+#: includes/class-pod-designer-settings.php:540
+msgid "Enable text layers"
+msgstr "Szöveg réteg engedélyezése"
+
+#: includes/class-pod-designer-settings.php:541
+msgid "Enable the 3D mug preview globally"
+msgstr "3D bögre előnézet globálisan engedélyezve"
+
+#: includes/class-pod-designer-settings.php:542
+msgid "Require a phone number on the submission form"
+msgstr "Telefonszám kötelező a beküldő űrlapon"
+
+#: includes/class-pod-designer-settings.php:546
+msgid "Fonts"
+msgstr "Betűtípusok"
+
+#: includes/class-pod-designer-settings.php:549
+msgid "One per line: Display name|CSS font-family. Only list fonts that are available on the visitor's machine or in the theme."
+msgstr "Soronként egy: Megjelenő név|CSS font-family. Csak olyan betűtípust adj meg, ami a látogató gépén vagy a témában elérhető."
+
+#: includes/class-pod-designer-settings.php:553
+msgid "Submit button label"
+msgstr "Beküldő gomb felirata"
+
+#: includes/class-pod-designer-settings.php:557
+msgid "Cart button label"
+msgstr "Kosár gomb felirata"
+
+#: includes/class-pod-designer-settings.php:561
+msgid "Successful submission message"
+msgstr "Sikeres beküldés üzenete"
+
+#: includes/class-pod-designer-settings.php:565
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: includes/class-pod-designer-settings.php:567
+msgid "Delete designs and settings when the plugin is deleted"
+msgstr "A plugin törlésekor a designok és beállítások is törlődjenek"
+
+#: includes/class-pod-designer-settings.php:572
+msgid "Save settings"
+msgstr "Beállítások mentése"
+
+#: includes/class-pod-designer-settings.php:575
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/class-pod-designer-settings.php:577
+msgid "WooCommerce is active. On a product you can pick the designer template under Product data → General."
+msgstr "A WooCommerce aktív. Egy terméknél a Termékadatok → Általános fülön tudod kiválasztani, melyik designer sablon tartozzon hozzá."
+
+#: includes/class-pod-designer-settings.php:579
+msgid "WooCommerce is not active, so the designer runs in standalone (shortcode) mode: submitted designs show up under the Designs menu."
+msgstr "A WooCommerce nem aktív, ezért a designer önálló (shortcode-os) módban működik: a beküldött designok a Designok menüben jelennek meg."
+
+#: includes/class-pod-designer-woocommerce.php:63
+msgid "the product has no price"
+msgstr "a terméknek nincs ára"
+
+#: includes/class-pod-designer-woocommerce.php:65
+msgid "the product is out of stock"
+msgstr "a termék nincs készleten"
+
+#: includes/class-pod-designer-woocommerce.php:74
+msgid "POD Designer:"
+msgstr "POD Designer:"
+
+#. translators: %s: reason the product is not purchasable.
+#: includes/class-pod-designer-woocommerce.php:77
+#, php-format
+msgid "the designer will not show up on the product page because %s. WooCommerce does not render the add-to-cart form in that case, and the designer lives inside that form. Set a real price and save the product again."
+msgstr "a designer nem fog megjelenni a termékoldalon, mert %s. A WooCommerce ilyenkor nem írja ki a kosárba tevő űrlapot, a designer pedig abban jelenik meg. Adj meg egy rendes árat, és mentsd újra a terméket."
+
+#: includes/class-pod-designer-woocommerce.php:104
+msgid "— No designer —"
+msgstr "— Nincs designer —"
+
+#: includes/class-pod-designer-woocommerce.php:116
+msgid "POD Designer template"
+msgstr "POD Designer sablon"
+
+#: includes/class-pod-designer-woocommerce.php:117
+msgid "When set, the customer can design the product on the product page and the design is attached to the order."
+msgstr "Ha be van állítva, a termékoldalon a megrendelő megtervezheti a terméket, és a design a rendeléshez kerül."
+
+#: includes/class-pod-designer-woocommerce.php:125
+msgid "On a product page, wide and full screen overlap the product gallery in most themes, so this stays inside the product column by default."
+msgstr "Termékoldalon a széles és a teljes képernyős mód a legtöbb témában átfedi a termékgalériát, ezért itt alapból a termékoszlopon belül marad."
+
+#: includes/class-pod-designer-woocommerce.php:128
+msgid "Inside the product column (default)"
+msgstr "A termékoszlopon belül (alapértelmezett)"
+
+#: includes/class-pod-designer-woocommerce.php:129
+msgid "Inside the product column"
+msgstr "A termékoszlopon belül"
+
+#: includes/class-pod-designer-woocommerce.php:130
+msgid "Wide"
+msgstr "Széles"
+
+#: includes/class-pod-designer-woocommerce.php:131
+msgid "Full screen"
+msgstr "Teljes képernyő"
+
+#: includes/class-pod-designer-woocommerce.php:216
+msgid "Design it"
+msgstr "Tervezés"
+
+#: includes/class-pod-designer-woocommerce.php:248
+msgid "Design the product before you add it to the cart."
+msgstr "Előbb tervezd meg a terméket, mielőtt kosárba teszed."
+
+#: includes/class-pod-designer-woocommerce.php:253
+msgid "This design already belongs to a placed order. Please design it again."
+msgstr "Ez a design már egy leadott rendeléshez tartozik. Tervezd meg újra."
+
+#: includes/class-pod-designer-woocommerce.php:338
+msgid "The customer's design"
+msgstr "A megrendelő designja"
+
+#: includes/class-pod-designer-woocommerce.php:422
+msgid "on product color"
+msgstr "termékszínen"
+
+#: includes/class-pod-designer-woocommerce.php:432
+msgid "Full production sheet"
+msgstr "Teljes gyártási adatlap"
+
+#: includes/class-pod-designer.php:121
+msgid "Send order"
+msgstr "Megrendelés elküldése"
+
+#: includes/class-pod-designer.php:122
+msgid "Add to cart"
+msgstr "Kosárba teszem"
+
+#: includes/class-pod-designer.php:123
+msgid "Thank you! We have received your design and will get in touch shortly."
+msgstr "Köszönjük! A designt megkaptuk, hamarosan felvesszük veled a kapcsolatot."
+
+#: includes/class-pod-designer.php:201
+msgid "T-shirt – front (297 × 420 mm)"
+msgstr "Póló – elöl (297 × 420 mm)"
+
+#: includes/class-pod-designer.php:209
+msgid "T-shirt – back (297 × 420 mm)"
+msgstr "Póló – hátul (297 × 420 mm)"
+
+#: includes/class-pod-designer.php:217
+msgid "Mug – unwrapped (185 × 90 mm)"
+msgstr "Bögre – kiterített (185 × 90 mm)"
+
+#: includes/class-pod-designer.php:241
+msgid "T-shirt"
+msgstr "Póló"
+
+#: includes/class-pod-designer.php:259
+msgid "Back"
+msgstr "Hátul"
+
+#: includes/class-pod-designer.php:269 includes/class-pod-designer.php:300
+msgid "Black"
+msgstr "Fekete"
+
+#: includes/class-pod-designer.php:270
+msgid "Navy"
+msgstr "Navy"
+
+#: includes/class-pod-designer.php:271
+msgid "Red"
+msgstr "Piros"
+
+#: includes/class-pod-designer.php:272
+msgid "Grey"
+msgstr "Szürke"
+
+#: includes/class-pod-designer.php:277
+msgid "Mug"
+msgstr "Bögre"
+
+#: includes/class-pod-designer.php:288
+msgid "Wrap print"
+msgstr "Körbenyomás"
+
+#: includes/class-pod-designer.php:363
+#, php-format
+msgid "View %d"
+msgstr "%d. nézet"
+
+#: includes/class-pod-designer.php:534
+msgid "Upload image"
+msgstr "Kép feltöltése"
+
+#: includes/class-pod-designer.php:535
+msgid "Add text"
+msgstr "Szöveg hozzáadása"
+
+#: includes/class-pod-designer.php:537
+msgid "Print side"
+msgstr "Nyomtatási oldal"
+
+#: includes/class-pod-designer.php:538
+msgid "Layers"
+msgstr "Rétegek"
+
+#: includes/class-pod-designer.php:539
+msgid "There is nothing on this side yet."
+msgstr "Még nincs elem ezen az oldalon."
+
+#: includes/class-pod-designer.php:541
+msgid "Forward"
+msgstr "Előre"
+
+#: includes/class-pod-designer.php:542
+msgid "Backward"
+msgstr "Hátra"
+
+#: includes/class-pod-designer.php:543
+msgid "Center"
+msgstr "Középre"
+
+#: includes/class-pod-designer.php:544
+msgid "Fit"
+msgstr "Kitöltés"
+
+#: includes/class-pod-designer.php:545
+msgid "Size"
+msgstr "Méret"
+
+#: includes/class-pod-designer.php:548
+msgid "Font"
+msgstr "Betűtípus"
+
+#: includes/class-pod-designer.php:549
+msgid "Font size"
+msgstr "Betűméret"
+
+#: includes/class-pod-designer.php:550
+msgid "Text color"
+msgstr "Szövegszín"
+
+#: includes/class-pod-designer.php:551
+msgid "Bold"
+msgstr "Félkövér"
+
+#: includes/class-pod-designer.php:552
+msgid "Not printable"
+msgstr "Nem nyomtatható"
+
+#: includes/class-pod-designer.php:553
+msgid "2D view"
+msgstr "2D nézet"
+
+#: includes/class-pod-designer.php:554
+msgid "3D view"
+msgstr "3D nézet"
+
+#: includes/class-pod-designer.php:555
+msgid "Auto rotate"
+msgstr "Automatikus forgatás"
+
+#: includes/class-pod-designer.php:558
+msgid "Phone number"
+msgstr "Telefonszám"
+
+#: includes/class-pod-designer.php:561
+msgid "Saving…"
+msgstr "Mentés folyamatban…"
+
+#: includes/class-pod-designer.php:562
+msgid "Low resolution – the print may look blurry."
+msgstr "Alacsony felbontás – a nyomat elmosódott lehet."
+
+#: includes/class-pod-designer.php:563
+msgid "Drop an image here, or click to browse."
+msgstr "Húzd ide a képet, vagy kattints a tallózáshoz."
+
+#: includes/class-pod-designer.php:564
+msgid "The image could not be loaded: "
+msgstr "Nem sikerült betölteni a képet: "
+
+#: includes/class-pod-designer.php:567
+msgid "left"
+msgstr "balra"
+
+#: includes/class-pod-designer.php:568
+msgid "right"
+msgstr "jobbra"
+
+#: includes/class-pod-designer.php:569
+msgid "top"
+msgstr "felül"
+
+#: includes/class-pod-designer.php:570
+msgid "bottom"
+msgstr "alul"
+
+#: includes/class-pod-designer.php:571
+#, php-format
+msgid "Outside the printable area (%s)."
+msgstr "Kilóg a nyomtatható területből (%s)."
+
+#: includes/class-pod-designer.php:572
+msgid "One item is outside the printable area. Move it back before you submit."
+msgstr "Egy elem kilóg a nyomtatható területből. Igazítsd vissza, mielőtt elküldöd."
+
+#: includes/class-pod-designer.php:573
+#, php-format
+msgid "%s items are outside the printable area. Move them back before you submit."
+msgstr "%s elem kilóg a nyomtatható területből. Igazítsd vissza őket, mielőtt elküldöd."
+
+#: includes/class-pod-designer.php:574
+msgid "The design is saved together with the cart item."
+msgstr "A design a kosárba tétellel együtt mentődik."
+
+#: includes/class-pod-designer.php:575
+msgid "Select an item to edit it."
+msgstr "Válassz ki egy elemet a szerkesztéshez."
+
+#: includes/class-pod-designer.php:576
+#, php-format
+msgid "The file is too large (max. %s MB)."
+msgstr "A fájl túl nagy (max. %s MB)."
+
+#: includes/class-pod-designer.php:577
+msgid "Uploading image…"
+msgstr "Kép feltöltése…"
+
+#: includes/class-pod-designer.php:578
+msgid "Upload failed."
+msgstr "Sikertelen feltöltés."
+
+#: includes/class-pod-designer.php:579 includes/class-pod-designer.php:878
+msgid "Upload at least one image or add some text."
+msgstr "Tölts fel legalább egy képet vagy adj hozzá szöveget."
+
+#: includes/class-pod-designer.php:580
+msgid "Saving failed."
+msgstr "A mentés nem sikerült."
+
+#: includes/class-pod-designer.php:581 includes/class-pod-designer.php:887
+msgid "Enter your name."
+msgstr "Add meg a neved."
+
+#: includes/class-pod-designer.php:582 includes/class-pod-designer.php:883
+msgid "Enter a valid email address."
+msgstr "Adj meg egy érvényes e-mail címet."
+
+#: includes/class-pod-designer.php:583 includes/class-pod-designer.php:891
+msgid "Enter your phone number."
+msgstr "Add meg a telefonszámod."
+
+#: includes/class-pod-designer.php:584
+msgid "Back to 0°"
+msgstr "Vissza 0°-ra"
+
+#: includes/class-pod-designer.php:610
+msgid "No designer template is available."
+msgstr "Nincs elérhető designer sablon."
+
+#: includes/class-pod-designer.php:715
+msgid "Loading the designer…"
+msgstr "Designer betöltése…"
+
+#: includes/class-pod-designer.php:717
+msgid "You need to enable JavaScript to use the designer."
+msgstr "A designer használatához engedélyezned kell a JavaScriptet."
+
+#: includes/class-pod-designer.php:731
+msgid "Your session expired, please reload the page."
+msgstr "Lejárt munkamenet, töltsd újra az oldalt."
+
+#: includes/class-pod-designer.php:737
+msgid "You need to log in to use the designer."
+msgstr "A designer használatához be kell jelentkezned."
+
+#: includes/class-pod-designer.php:754
+msgid "Too many uploads in a short time. Please try again later."
+msgstr "Túl sok feltöltés rövid idő alatt. Próbáld újra később."
+
+#: includes/class-pod-designer.php:773
+msgid "Missing file."
+msgstr "Hiányzó fájl."
+
+#: includes/class-pod-designer.php:779
+msgid "The file could not be uploaded."
+msgstr "A fájl feltöltése nem sikerült."
+
+#: includes/class-pod-designer.php:783
+msgid "The file is too large."
+msgstr "A fájl túl nagy."
+
+#: includes/class-pod-designer.php:787
+msgid "You can only upload image files."
+msgstr "Csak képfájlt tölthetsz fel."
+
+#: includes/class-pod-designer.php:813
+msgid "The file could not be saved."
+msgstr "A fájl mentése nem sikerült."
+
+#: includes/class-pod-designer.php:853
+msgid "Invalid data."
+msgstr "Hibás adat."
+
+#: includes/class-pod-designer.php:859
+msgid "Unknown product template."
+msgstr "Ismeretlen termék sablon."
+
+#: includes/class-pod-designer.php:865
+msgid "The design is empty."
+msgstr "A design üres."
+
+#: includes/class-pod-designer.php:898
+#, php-format
+msgid "%1$s – preview (%2$s)"
+msgstr "%1$s – előnézet (%2$s)"
+
+#: includes/class-pod-designer.php:899
+#, php-format
+msgid "%1$s – print-ready (%2$s)"
+msgstr "%1$s – nyomdakész (%2$s)"

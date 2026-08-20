@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <linearGradient id="podTeeBackBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dfdfe3"/>
+      <stop offset="0.12" stop-color="#f7f7f8"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="0.88" stop-color="#f4f4f6"/>
+      <stop offset="1" stop-color="#d9d9de"/>
+    </linearGradient>
+    <linearGradient id="podTeeBackShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.05"/>
+      <stop offset="0.35" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M316,64 C330,108 360,124 400,124 C440,124 470,108 484,64 L596,96 L700,196 L764,340 L660,392 L612,300 L612,836 C612,848 604,856 592,856 L208,856 C196,856 188,848 188,836 L188,300 L140,392 L36,340 L100,196 L204,96 Z"
+        fill="url(#podTeeBackBody)" stroke="#cfcfd6" stroke-width="2" stroke-linejoin="round"/>
+
+  <path d="M316,64 C330,108 360,124 400,124 C440,124 470,108 484,64 L596,96 L700,196 L764,340 L660,392 L612,300 L612,836 C612,848 604,856 592,856 L208,856 C196,856 188,848 188,836 L188,300 L140,392 L36,340 L100,196 L204,96 Z"
+        fill="url(#podTeeBackShade)"/>
+
+  <path d="M310,60 C326,112 358,132 400,132 C442,132 474,112 490,60"
+        fill="none" stroke="#cbcbd2" stroke-width="14" stroke-linecap="round"/>
+
+  <path d="M660,392 L612,300" fill="none" stroke="#d5d5db" stroke-width="3"/>
+  <path d="M140,392 L188,300" fill="none" stroke="#d5d5db" stroke-width="3"/>
+  <path d="M204,96 L188,300" fill="none" stroke="#dcdce1" stroke-width="3"/>
+  <path d="M596,96 L612,300" fill="none" stroke="#dcdce1" stroke-width="3"/>
+  <path d="M204,844 L596,844" fill="none" stroke="#dcdce1" stroke-width="3"/>
+</svg>

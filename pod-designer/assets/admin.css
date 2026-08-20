@@ -1,0 +1,273 @@
+/* ------------------------------------------------------- Template editor */
+
+.pod-admin__intro {
+    max-width: 900px;
+}
+
+.pod-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    margin: 0 0 18px;
+}
+
+.pod-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e4e7;
+    background: #f6f7f7;
+    border-radius: 6px 6px 0 0;
+}
+
+.pod-card__title {
+    margin: 0;
+    font-size: 15px;
+}
+
+.pod-card__actions {
+    display: flex;
+    gap: 14px;
+}
+
+.pod-card__actions .pod-delete-template {
+    color: #b32d2e;
+}
+
+.pod-card__body {
+    padding: 4px 16px 16px;
+}
+
+.pod-card.is-collapsed .pod-card__body {
+    display: none;
+}
+
+.pod-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pod-row {
+    display: flex;
+    gap: 18px;
+    padding: 14px;
+    border: 1px solid #e2e4e7;
+    border-radius: 6px;
+    background: #fbfbfc;
+}
+
+.pod-color-row {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pod-row__media {
+    flex: 0 0 240px;
+}
+
+.pod-row__fields {
+    flex: 1 1 auto;
+}
+
+.pod-row__fields label {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 12px;
+    color: #50575e;
+}
+
+.pod-media-preview {
+    position: relative;
+    width: 100%;
+    min-height: 90px;
+    border: 1px dashed #c3c4c7;
+    border-radius: 4px;
+    background-color: #fff;
+    background-image:
+        linear-gradient(45deg, #eee 25%, transparent 25%),
+        linear-gradient(-45deg, #eee 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eee 75%),
+        linear-gradient(-45deg, transparent 75%, #eee 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.pod-media-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pod-media-preview--small {
+    max-width: 120px;
+    min-height: 60px;
+}
+
+.pod-media-preview.is-drawing {
+    cursor: crosshair;
+}
+
+.pod-area-marker {
+    position: absolute;
+    border: 2px dashed #2271b1;
+    background: rgba(34, 113, 177, 0.12);
+    pointer-events: none;
+}
+
+.pod-area-inputs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.pod-area-inputs label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pod-area-line {
+    margin-top: 10px;
+}
+
+.pod-color-main {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.pod-color-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.pod-color-image {
+    width: 130px;
+    font-size: 12px;
+}
+
+.pod-color-image__label {
+    display: block;
+    margin-bottom: 4px;
+    color: #50575e;
+}
+
+/* --------------------------------------------------------- Design screen */
+
+.pod-admin-thumb {
+    display: block;
+    width: 60px;
+    height: auto;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+.pod-color-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+}
+
+.pod-state {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    background: #f0f0f1;
+}
+
+.pod-state--new {
+    background: #d7ebff;
+}
+
+.pod-state--in_progress {
+    background: #fff3cd;
+}
+
+.pod-state--done {
+    background: #d8f2dd;
+}
+
+.pod-state--cancelled {
+    background: #f5d7d7;
+}
+
+.pod-preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pod-preview-card {
+    flex: 0 1 340px;
+}
+
+.pod-preview-card h3 {
+    margin: 0 0 8px;
+}
+
+.pod-preview-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.pod-file-links {
+    margin-top: 8px;
+}
+
+.pod-layer-table {
+    margin-bottom: 16px;
+}
+
+.pod-layer-table .pod-layer-thumb {
+    max-width: 70px;
+    height: auto;
+}
+
+.pod-layer-text {
+    font-family: monospace;
+}
+
+.pod-muted {
+    color: #646970;
+}
+
+.pod-dpi--low {
+    color: #b32d2e;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------ WooCommerce order */
+
+.pod-order-design {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.pod-order-design__view img {
+    display: block;
+    max-width: 180px;
+    height: auto;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.pod-cart-preview {
+    max-width: 100%;
+    height: auto;
+}
